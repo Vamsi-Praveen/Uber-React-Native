@@ -10,10 +10,11 @@ const RideOptionsCard = () => {
     const navigate = useNavigation()
     const [selectedRide, setSelectedRide] = useState(null)
     const travelTime = useSelector(selectTravelTime)
+    const distance = (Number(travelTime?.distance?.text.split(' ')[0]) * 1.6).toFixed(1)
     return (
         <View className="flex-1 bg-white p-2">
             <View className="items-center">
-                <Text className="text-center text-[24px] font-semibold tracking-wider pb-3 pt-1 realtive">Select a Ride - {travelTime?.distance?.text}</Text>
+                <Text className="text-center text-[24px] font-semibold tracking-wider pb-3 pt-1 realtive">Select a Ride - {distance} KM</Text>
                 <TouchableOpacity className="absolute top-2 left-5"
                     onPress={() => { navigate.goBack() }}
                 >
