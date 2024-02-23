@@ -1,5 +1,5 @@
 import { View, Image } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavOptions from '../components/navOptions'
 import GooglePlacesInput from '../components/googlePlacesInput'
 import FavOptions from '../components/favOptions'
